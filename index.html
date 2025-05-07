@@ -1,0 +1,97 @@
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'c844e89248036cd895068e1f8ad83d4d',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/c844e89248036cd895068e1f8ad83d4d/invoke.js"></script>
+<div style="max-width:400px;margin:auto;padding:10px;font-family:'Segoe UI',sans-serif;">
+  <div id="calculator" style="border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.1);overflow:hidden;background:#fff;">
+    <div id="display" style="background:#0f172a;color:#f8fafc;padding:20px;font-size:2rem;text-align:right;min-height:60px;word-wrap:break-word;">0</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);">
+      <button onclick="calcClear()" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#f8fafc;">C</button>
+      <button onclick="calcDel()" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#f8fafc;">⌫</button>
+      <button onclick="calcOp('%')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#cbd5e1;">%</button>
+      <button onclick="calcOp('/')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#cbd5e1;">÷</button>
+
+      <button onclick="calcNum('7')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">7</button>
+      <button onclick="calcNum('8')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">8</button>
+      <button onclick="calcNum('9')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">9</button>
+      <button onclick="calcOp('*')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#cbd5e1;">×</button>
+
+      <button onclick="calcNum('4')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">4</button>
+      <button onclick="calcNum('5')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">5</button>
+      <button onclick="calcNum('6')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">6</button>
+      <button onclick="calcOp('-')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#cbd5e1;">−</button>
+
+      <button onclick="calcNum('1')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">1</button>
+      <button onclick="calcNum('2')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">2</button>
+      <button onclick="calcNum('3')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">3</button>
+      <button onclick="calcOp('+')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#cbd5e1;">+</button>
+
+      <button onclick="calcNum('0')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;grid-column:span 2;">0</button>
+      <button onclick="calcNum('.')" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;">.</button>
+      <button onclick="calcEqual()" style="padding:20px;font-size:1.5rem;border:1px solid #e2e8f0;background:#38bdf8;color:white;">=</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var calcInput = '';
+
+  function updateDisplay() {
+    document.getElementById('display').innerText = calcInput || '0';
+  }
+
+  function calcNum(n) {
+    calcInput += n;
+    updateDisplay();
+  }
+
+  function calcOp(op) {
+    if (calcInput === '') return;
+    const last = calcInput.slice(-1);
+    if ('+-*/%'.includes(last)) {
+      calcInput = calcInput.slice(0, -1) + op;
+    } else {
+      calcInput += op;
+    }
+    updateDisplay();
+  }
+
+  function calcClear() {
+    calcInput = '';
+    updateDisplay();
+  }
+
+  function calcDel() {
+    calcInput = calcInput.slice(0, -1);
+    updateDisplay();
+  }
+
+  function calcEqual() {
+    try {
+      calcInput = eval(calcInput.replace(/%/g, '/100')).toString();
+    } catch {
+      calcInput = 'Error';
+    }
+    updateDisplay();
+  }
+
+  updateDisplay();
+</script>
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs4LS9sSXXCe5S_rDqT8iRjFPvwNQAhP_JU7FtlrB2MqmG2jVtT2v6VKQVZnQ1OJ-fUKJ9-grCmKbSzLJjsys_cnBEBz4py_RgR603J7L4N2gvl2clVkAsOJ0M3zAQrh6VQcY2NuQQNObPK95fUqFyAZrxEymeamnDGX5f1zdQYNzdc7rFcP6cYsKuzUw/s512/unnamed.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="512" data-original-width="512" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs4LS9sSXXCe5S_rDqT8iRjFPvwNQAhP_JU7FtlrB2MqmG2jVtT2v6VKQVZnQ1OJ-fUKJ9-grCmKbSzLJjsys_cnBEBz4py_RgR603J7L4N2gvl2clVkAsOJ0M3zAQrh6VQcY2NuQQNObPK95fUqFyAZrxEymeamnDGX5f1zdQYNzdc7rFcP6cYsKuzUw/s320/unnamed.png"/></a></div>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'c844e89248036cd895068e1f8ad83d4d',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/c844e89248036cd895068e1f8ad83d4d/invoke.js"></script>
